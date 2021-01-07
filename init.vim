@@ -36,7 +36,7 @@ function! SaveConfig()
   echo timenow 
   !git -C /Users/lety02/Eine/vimrc-not-s/ add .
   !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m timenow
-  !git -C /Users/lety02/Eine/vimrc-not-s/ push origin master
+  !git -C /Users/lety02/Eine/vimrc-not-s/ push master origin
 endfunction
 
 " ;sc Save Config(mandatory, not optional)
