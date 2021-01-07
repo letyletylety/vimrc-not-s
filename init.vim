@@ -32,10 +32,10 @@ function! SaveConfig()
   " source % <CR>
   w! /Users/lety02/Eine/vimrc-not-s/init.vim
   echom '::::::save done::::::'
-  let b:timenow=strftime("%c")
-  echo b:timenow 
+  let g:timenow=strftime("%c")
+  echo g:timenow 
   !git -C /Users/lety02/Eine/vimrc-not-s/ add .
-  !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m "".b:timenow
+  !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m g:timenow
   !git -C /Users/lety02/Eine/vimrc-not-s/ push
 endfunction
 
