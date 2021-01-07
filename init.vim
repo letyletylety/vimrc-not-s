@@ -35,7 +35,7 @@ function! SaveConfig()
   let b:timenow=strftime("%c")
   echo b:timenow 
   !git -C /Users/lety02/Eine/vimrc-not-s/ add .
-  !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m b:timenow
+  !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m "".b:timenow
   !git -C /Users/lety02/Eine/vimrc-not-s/ push
 endfunction
 
