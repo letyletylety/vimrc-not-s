@@ -24,10 +24,11 @@ let mapleader=';'
 " http://vim.wikia.com/wiki/Avoid_the_escape_key
 inoremap ;; <Esc>
 
+"TODO : change all folder paths 
+"
 " ;ec Edit Config
 nnoremap <silent> <leader>ec :e ~/.config/nvim/init.vim<CR> 
 
-"TODO : change the folder
 function! SaveConfig()
   if expand('%:p') == $HOME . '/.config/nvim/init.vim'
     echom expand('%:p')
