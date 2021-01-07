@@ -41,6 +41,7 @@ function! SaveConfig()
     !git -C /Users/lety02/Eine/vimrc-not-s/ add .
     !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m "$(date)"
     !git -C /Users/lety02/Eine/vimrc-not-s/ push
+    echom '::::::git done::::::'
   else
     echom '=====THIS IS NOT VIM CONFIG FILE====='
   endif
