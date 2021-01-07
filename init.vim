@@ -29,7 +29,7 @@ nnoremap <silent> <leader>ec :e ~/.config/nvim/init.vim<CR>
 
 "TODO : change the folder
 function! SaveConfig()
-  if expand('%:p') == '$HOME/.config/nvim/init.vim'
+  if expand('%:p') == '$(HOME)/.config/nvim/init.vim'
     echom expand('%:p')
     echom 'here'
   endif
