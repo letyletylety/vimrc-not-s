@@ -27,10 +27,16 @@ inoremap ;; <Esc>
 " ;ec Edit Config
 nnoremap <silent> <leader>ec :e ~/.config/nvim/init.vim<CR> 
 
+"TODO : change the folder
 function! SaveConfig()
-		" source % <CR>
-    w! /Users/lety02/Eine/vimrc-not-s/init.vim
-    echom '::::::save done::::::'
+  " source % <CR>
+  w! /Users/lety02/Eine/vimrc-not-s/init.vim
+  echom '::::::save done::::::'
+  let timenow=strftime("%c")
+  echo timenow 
+  !git -C /Users/lety02/Eine/vimrc-not-s/ add .
+  !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m timenow
+  !git -C /Users/lety02/Eine/vimrc-not-s/ push origin master
 endfunction
 
 " ;sc Save Config(mandatory, not optional)
