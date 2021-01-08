@@ -10,7 +10,7 @@ colo seoul256
 "   endif
 " endfunction
 
-nnoremap <silent> <leader>tc :let g:seoul256_background = 489 - g:seoul256_background
+nnoremap <silent> <leader>tc :let g:seoul256_background = 489 - g:seoul256_background<CR>
 
 syntax on
 filetype indent on
