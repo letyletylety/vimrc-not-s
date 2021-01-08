@@ -1,16 +1,6 @@
-let g:seoul256_background = 256
+"===colorize===
+let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
-
-" function! ToggleColor()
-"   echom 'toggle background color'
-"   if background==dark
-"     set bg=dark
-"   else
-"     set bg=light
-"   endif
-" endfunction
-
-nnoremap <silent> <leader>tc :let g:seoul256_background = 489 - g:seoul256_background<CR>
 
 syntax on
 filetype indent on
