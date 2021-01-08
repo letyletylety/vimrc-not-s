@@ -27,7 +27,7 @@ inoremap ;; <Esc>
 "TODO : change all folder paths 
 "
 " ;ec Edit Config
-nnoremap <silent> <leader>ec :e ~/.config/nvim/init.vim<CR> 
+nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
 
 function! SaveConfig()
   if expand('%:p') == $HOME . '/.config/nvim/init.vim'
