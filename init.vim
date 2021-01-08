@@ -1,4 +1,5 @@
-colorscheme industry
+colo seoul256
+
 syntax on
 filetype indent on
 
@@ -75,6 +76,7 @@ Plug 'fatih/vim-go'
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
