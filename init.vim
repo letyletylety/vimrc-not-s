@@ -103,7 +103,7 @@ nnoremap tb :TagbarToggle<CR>
 
 " ===colorize===
 let g:lightline={
-  \'colorscheme':'seoul256'
+  \'colorscheme': 'seoul256'
   \}
 let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
@@ -148,15 +148,25 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 hi! CocErrorSign guifg=#d1666a
 
 """ ===== go =====
-nnoremap gr :GoRun<CR>
-nnoremap gb :GoBuild<CR>
+autocmd FileType go nnoremap gr :GoRun<CR>
+" autocmd FileType go nnoremap gb :GoBuild<CR>
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0,1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+autocmd FileType go nnoremap gb :call s:build_go_files()<CR>
+autocmd FileType go nnoremap gt :GoTest<CR>
 " :GoPlay
 
 
 "quickfix 
 let g:go_list_type = "quickfix"
 "jump between errors
-nnoremap cj :cnext<CR>
-nnoremap ck :cprevious<CR>
+autocmd FileType go nnoremap cj :cnext<CR>
+autocmd FileType go nnoremap ck :cprevious<CR>
 "quit
-nnoremap cq :cclose<CR>
+autocmd FileType go nnoremap cq :cclose<CR>
