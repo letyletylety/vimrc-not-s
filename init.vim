@@ -146,7 +146,8 @@ hi! CocErrorSign guifg=#d1666a
 nnoremap gr :GoRun<CR>
 nnoremap gb :GoBuild<CR>
 " :GoPlay
-"
+
+"quickfix jump between errors
 nnoremap cj :cnext<CR>
 nnoremap ck :cprevious<CR>
 
