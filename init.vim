@@ -1,6 +1,3 @@
-"===colorize===
-let g:seoul256_background=233 " ~ 255(lightest)
-colo seoul256
 
 syntax on
 filetype indent on
@@ -103,6 +100,10 @@ nnoremap <C-l> :nohlsearch<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 
+"===colorize===
+let g:seoul256_background=233 " ~ 255(lightest)
+colo seoul256
+
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
 let dart_html_in_string=v:true
@@ -147,7 +148,11 @@ nnoremap gr :GoRun<CR>
 nnoremap gb :GoBuild<CR>
 " :GoPlay
 
-"quickfix jump between errors
+
+"quickfix 
+let g:go_list_type = "quickfix"
+"jump between errors
 nnoremap cj :cnext<CR>
 nnoremap ck :cprevious<CR>
-
+"quit
+nnoremap cq :cclose<CR>
