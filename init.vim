@@ -1,4 +1,16 @@
+let g:seoul256_background = 256
 colo seoul256
+
+" function! ToggleColor()
+"   echom 'toggle background color'
+"   if background==dark
+"     set bg=dark
+"   else
+"     set bg=light
+"   endif
+" endfunction
+
+nnoremap <silent> <leader>tb ToggleColor()
 
 syntax on
 filetype indent on
