@@ -18,6 +18,8 @@ set ts=2
 set expandtab
 set shiftwidth=2
 
+set autowrite
+
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 
 
@@ -144,3 +146,7 @@ hi! CocErrorSign guifg=#d1666a
 nnoremap gr :GoRun<CR>
 nnoremap gb :GoBuild<CR>
 " :GoPlay
+"
+nnoremap cj :cnext<CR>
+nnoremap ck :cprevious<CR>
+
