@@ -64,7 +64,8 @@ Plug 'tpope/vim-surround'
 " interface
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
 
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin'
@@ -100,7 +101,7 @@ nnoremap <C-l> :nohlsearch<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 
-"===colorize===
+" ===colorize===
 let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
 
