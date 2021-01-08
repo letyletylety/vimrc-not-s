@@ -137,5 +137,5 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 """ ===== go =====
 
 nnoremap gr :GoRun<CR>
-" :GoBuild
+nnoremap gb :GoBuild<CR>
 " :GoPlay
