@@ -135,7 +135,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 
 """ ===== go =====
-
 nnoremap gr :GoRun<CR>
 nnoremap gb :GoBuild<CR>
 " :GoPlay
