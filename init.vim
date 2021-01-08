@@ -1,4 +1,3 @@
-
 syntax on
 filetype indent on
 
@@ -153,6 +152,7 @@ autocmd FileType go nnoremap gr :GoRun<CR>
 "
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
+  echom "1231231"
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
     call go#test#Test(0, 1)
@@ -161,8 +161,7 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-
+autocmd FileType go nnoremap <leader>b :call s:build_go_files()<CR>
 autocmd FileType go nnoremap gt :GoTest<CR>
 " :GoPlay
 
