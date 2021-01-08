@@ -158,7 +158,8 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-autocmd FileType go nnoremap gb :call s:build_go_files()<CR>
+
+autocmd FileType go nmap gb :call <SID>build_go_files()<CR>
 autocmd FileType go nnoremap gt :GoTest<CR>
 " :GoPlay
 
