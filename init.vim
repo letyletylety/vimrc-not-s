@@ -150,7 +150,7 @@ hi! CocErrorSign guifg=#d1666a
 """ ===== go =====
 autocmd FileType go nnoremap gr :GoRun<CR>
 " autocmd FileType go nnoremap gb :GoBuild<CR>
-function! s:build_go_files()
+function! Build_go_files()
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
     call go#test#Test(0,1)
@@ -159,7 +159,7 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nmap gb :call <SID>build_go_files()<CR>
+autocmd FileType go nmap gb :call Build_go_files()<CR>
 autocmd FileType go nnoremap gt :GoTest<CR>
 " :GoPlay
 
