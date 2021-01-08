@@ -102,6 +102,9 @@ nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 
 " ===colorize===
+let g:lightline={
+  \'colorscheme':'seoul256'
+  \}
 let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
 
