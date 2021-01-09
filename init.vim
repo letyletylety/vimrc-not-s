@@ -21,6 +21,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 let mapleader=';'
 
+nnoremap :W :w
+
 " use ;; for escape
 " http://vim.wikia.com/wiki/Avoid_the_escape_key
 inoremap ;; <Esc>
@@ -164,14 +166,18 @@ function! s:build_go_files()
   endif
 endfunction
 
+" build or test
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+" test this function
 autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
 
-" maybe slow
+" WARNING: maybe slow in very large codebases
 let g:go_fmt_command = "goimports"
+
+" let g:go_textobj_include_function_doc = 0
 
 "quickfix 
 let g:go_list_type = "quickfix"
