@@ -147,7 +147,7 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 hi! CocErrorSign guifg=#d1666a
 
 """ ===== go =====
-autocmd FileType go nnoremap gr :GoRun<CR>
+autocmd FileType go nmap <leader>r :GoRun<CR>
 " autocmd FileType go nnoremap gb :GoBuild<CR>
 "
 " run :GoBuild or :GoTestCompile based on the go file
@@ -162,8 +162,8 @@ function! s:build_go_files()
   endif
 endfunction
 
-autocmd FileType go nnoremap <leader>b :<C-u>call s:build_go_files()<CR>
-autocmd FileType go nnoremap gt :GoTestFunc<CR>
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
 
 
