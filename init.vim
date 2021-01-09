@@ -22,7 +22,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let mapleader=';'
 
 " capital W is also w
-nnoremap :W :save
+nnoremap :W :w
 
 " use ;; for escape
 " http://vim.wikia.com/wiki/Avoid_the_escape_key
