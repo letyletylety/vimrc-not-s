@@ -21,6 +21,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 let mapleader=';'
 
+" capital W is also w
 nnoremap :W :w
 
 " use ;; for escape
@@ -68,13 +69,16 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 " Plug 'vim-airline/vim-airline'
 
+" dart plugine
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+" replaced by coc-flutter
+" Plug 'natebosch/vim-lsc'
+" Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
 Plug 'fatih/vim-go'
+Plug 'andrewradev/splitjoin.vim'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
