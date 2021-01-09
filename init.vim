@@ -147,6 +147,8 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 hi! CocErrorSign guifg=#d1666a
 
 """ ===== go =====
+let g:go_test_timeout = '10s'
+
 autocmd FileType go nmap <leader>r :GoRun<CR>
 " autocmd FileType go nnoremap gb :GoBuild<CR>
 "
