@@ -170,6 +170,8 @@ autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
 
+" maybe slow
+let g:go_fmt_command = "goimports"
 
 "quickfix 
 let g:go_list_type = "quickfix"
