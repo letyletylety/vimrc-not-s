@@ -167,6 +167,8 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
 
 
 "quickfix 
