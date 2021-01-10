@@ -190,9 +190,9 @@ let g:go_fmt_command = "goimports"
 " let g:go_textobj_include_function_doc = 0
 
 " By default it'll run go vet, golint and errcheck concurrently. gometalinter collects all the outputs and normalizes it to a common format.
-" let g:go_metalinter_autosave = 1
-" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-" let g:go_metalinter_deadline = "5s"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
 
 " C-j to jump in snippet result
 " errp, fn, ff, ln, lf
