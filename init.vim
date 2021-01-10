@@ -187,6 +187,8 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
+" :GoRename []
+
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 
@@ -211,7 +213,6 @@ let g:go_gopls_staticcheck=1
 let g:go_metalinter_deadline = "5s"
 
 let g:go_rename_command='gopls'
-
 
 " C-j to jump in snippet result
 " errp, fn, ff, ln, lf
