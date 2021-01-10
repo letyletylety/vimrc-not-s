@@ -181,7 +181,7 @@ autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
-autocmd FileType go nmap <Leader>al :GoAlternate
+autocmd FileType go nmap ga GoAlternate
 
 " WARNING: maybe slow in very large codebases
 let g:go_fmt_command = "goimports"
