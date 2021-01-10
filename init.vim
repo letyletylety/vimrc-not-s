@@ -190,7 +190,6 @@ autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 let g:go_auto_type_info = 1
 let g:go_auto_sameids = 1
 
-
 let g:go_def_mode = 'godef'
 " :GoDecls :GoDeclsDir
 let g:go_decls_includes = "func,type"
@@ -210,6 +209,9 @@ let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_command='gopls'
 let g:go_gopls_staticcheck=1
 let g:go_metalinter_deadline = "5s"
+
+let g:go_rename_command='gopls'
+
 
 " C-j to jump in snippet result
 " errp, fn, ff, ln, lf
