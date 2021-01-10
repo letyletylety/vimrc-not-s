@@ -181,7 +181,18 @@ autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
-autocmd FileType go nmap ga :GoAlternate<CR>
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+autocmd FileType go nmap <leader>d :GoDecls<CR>
+autocmd FileType go nmap <leader>d :GoDeclsDir<CR>
+
+let g:go_def_mode = 'godef'
+" :GoDecls :GoDeclsDir
+let g:go_decls_includes = "func,type"
+" let g:go_decls_includes = "func"
+
 
 " WARNING: maybe slow in very large codebases
 let g:go_fmt_command = "goimports"
