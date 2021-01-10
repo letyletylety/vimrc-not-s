@@ -180,11 +180,20 @@ autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
 
 " WARNING: maybe slow in very large codebases
 let g:go_fmt_command = "goimports"
-
+let g:go_fmt_fail_silently = 1
+" let g:go_addtags_transform = "camelcase"
 " let g:go_textobj_include_function_doc = 0
+
+" C-j to jump in snippet result
+" errp, fn, ff, ln, lf
+
+" splitjoin
+" gS to split
+" gJ to join
 
 "quickfix 
 let g:go_list_type = "quickfix"
+
 "jump between errors
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
