@@ -190,6 +190,9 @@ let g:go_fmt_fail_silently = 1
 " splitjoin
 " gS to split
 " gJ to join
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
 
 "quickfix 
 let g:go_list_type = "quickfix"
