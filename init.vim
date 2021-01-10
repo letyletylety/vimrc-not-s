@@ -153,6 +153,8 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 hi! CocErrorSign guifg=#d1666a
 
 """ ===== go =====
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
+
 let g:go_test_timeout = '10s'
 
 autocmd FileType go nmap <leader>r :GoRun<CR>
