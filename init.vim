@@ -188,6 +188,8 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
+let g:go_auto_type_info = 1
+
 
 let g:go_def_mode = 'godef'
 " :GoDecls :GoDeclsDir
