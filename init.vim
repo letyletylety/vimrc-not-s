@@ -186,7 +186,7 @@ autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit'
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
-autocmd FileType go nmap <leader>d :GoDeclsDir<CR>
+autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 
 let g:go_def_mode = 'godef'
 " :GoDecls :GoDeclsDir
