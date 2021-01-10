@@ -69,6 +69,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 " Plug 'vim-airline/vim-airline'
 
+Plug 'ctrlpvim/ctrlp.vim'
+
 " dart plugine
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin'
@@ -179,12 +181,18 @@ autocmd FileType go nmap <leader>t :GoTestFunc<CR>
 " :GoPlay
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
+autocmd FileType go nmap <Leader>al :GoAlternate
 
 " WARNING: maybe slow in very large codebases
 let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
+" let g:go_fmt_fail_silently = 1
 " let g:go_addtags_transform = "camelcase"
 " let g:go_textobj_include_function_doc = 0
+
+" By default it'll run go vet, golint and errcheck concurrently. gometalinter collects all the outputs and normalizes it to a common format.
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
 
 " C-j to jump in snippet result
 " errp, fn, ff, ln, lf
@@ -192,6 +200,8 @@ let g:go_fmt_fail_silently = 1
 " splitjoin
 " gS to split
 " gJ to join
+" Use ctrl-] or gd to jump to a definition, locally or globally
+" Use ctrl-t to jump back to the previous location
 
 " highlighting for go
 let g:go_highlight_types = 1
