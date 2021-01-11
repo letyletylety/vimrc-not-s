@@ -82,6 +82,10 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go'
 Plug 'andrewradev/splitjoin.vim'
 
+" for svelte
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
