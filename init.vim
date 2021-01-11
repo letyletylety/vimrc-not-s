@@ -117,7 +117,40 @@ nnoremap <C-l> :nohlsearch<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 
-" ===colorize===
+" ===== NERDCommenter settings =====
+
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDCustomDelimiters = { 'html': { 'left': '' } }
+
+" Align comment delimiters to the left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+fu! NERDCommenter_before()
+  if (&ft == 'html') || (&ft == 'svelte')
+    let g:ft = &ft
+    let cfts = context_filetype#get_filetypes()
+    if len(cfts) > 0
+      if cfts[0] == 'svelte'
+        let cft = 'html'
+      elseif cfts[0] == 'scss'
+        let cft = 'css'
+      else
+        let cft = cfts[0]
+      endif
+      exe 'setf ' . cft
+    endif
+  endif
+endfu
+
+fu! NERDCommenter_after()
+  if (g:ft == 'html') || (g:ft == 'svelte')
+    exec 'setf ' . g:ft
+    let g:ft = ''
+  endif
+endfu
+
+" === colorize ===
 let g:lightline={
   \'colorscheme': 'seoul256'
   \}
@@ -249,11 +282,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 
-" Prettier Settings
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat_require_pragma = 0
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
-
 "quickfix 
 let g:go_list_type = "quickfix"
 
@@ -262,3 +290,30 @@ autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 "quit
 autocmd FileType go nnoremap cq :cclose<CR>
+
+
+" ====== svelte ======
+
+" Prettier Settings
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat_require_pragma = 0
+au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+
+nmap ff (coc-format-selected)
+nmap rn (coc-rename)
+nmap gd (coc-definition)
+nmap gy (coc-type-definition)
+nmap gi (coc-implementation)
+nmap gr (coc-references)
+
+" Use K to show documentation in preview window
+nnoremap  K :call show_documentation()
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
