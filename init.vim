@@ -190,8 +190,13 @@ autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 " :GoRename []
 
 let g:go_auto_type_info = 1
-let g:go_auto_sameids = 1
+" let g:go_auto_sameids = 1
 
+let g:go_echo_go_info = 1
+
+" disable vim-go :GoDef short cut (gd)
+" " this is handled by LanguageClient [LC]
+" let g:go_def_mapping_enabled = 0
 let g:go_def_mode = 'godef'
 " :GoDecls :GoDeclsDir
 let g:go_decls_includes = "func,type"
