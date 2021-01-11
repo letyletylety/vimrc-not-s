@@ -73,17 +73,22 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " dart plugine
 " https://vimawesome.com/plugin/dart-vim-plugin
-Plug 'dart-lang/dart-vim-plugin'
+Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
 " Plug 'natebosch/vim-lsc'
 " Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'andrewradev/splitjoin.vim'
 
 " for svelte
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'evanleck/vim-svelte', {'branch': 'main', 
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 
 " Use release branch (recommend)
@@ -243,6 +248,11 @@ let g:go_highlight_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
+
+" Prettier Settings
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat_require_pragma = 0
+au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 
 "quickfix 
 let g:go_list_type = "quickfix"
