@@ -188,15 +188,16 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 " :GoRename []
+" :GoImpl
 
 let g:go_auto_type_info = 1
 " let g:go_auto_sameids = 1
 
-let g:go_echo_go_info = 1
-
+" https://github.com/fatih/vim-go/issues/2923
+let g:go_gpls_enabled=0
 " disable vim-go :GoDef short cut (gd)
-" " this is handled by LanguageClient [LC]
-" let g:go_def_mapping_enabled = 0
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
 let g:go_def_mode = 'godef'
 " :GoDecls :GoDeclsDir
 let g:go_decls_includes = "func,type"
