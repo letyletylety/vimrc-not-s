@@ -33,6 +33,9 @@ inoremap ;; <Esc>
 " ;ec Edit Config
 nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
 
+nnoremap <leader>vs :silent exec "!open vscodium://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
+
+
 function! SaveConfig()
   if expand('%:p') == $HOME . '/.config/nvim/init.vim'
     echom expand('%:p')
@@ -171,14 +174,14 @@ let g:lsc_auto_map = v:true
 autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
 
-" run / pub get / devices / hot reload
+" run / pub get / devices / 
 autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
       " \ :CocCommand flutter.dev.openDevLog<CR>
 autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
 autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
-autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
 
-" devlog
+" hotReload / openDevLog
+autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
 autocmd FileType dart nnoremap <leader>l :CocCommand flutter.dev.openDevLog<CR>
 
 " toggle outline
