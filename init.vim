@@ -16,6 +16,9 @@ set shiftwidth=2
 
 set autowrite
 
+" use system clipboard
+set clipboard=unnamedplus
+
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 
 
@@ -33,7 +36,7 @@ inoremap ;; <Esc>
 " ;ec Edit Config
 nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
 
-nnoremap <leader>vs :silent exec "!open vscodium://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
+nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
 
 
 function! SaveConfig()
@@ -73,6 +76,9 @@ Plug 'itchyny/lightline.vim'
 " Plug 'vim-airline/vim-airline'
 
 Plug 'ctrlpvim/ctrlp.vim'
+
+" test
+Plug 'vim-test/vim-test'
 
 " dart plugine
 " https://vimawesome.com/plugin/dart-vim-plugin
@@ -160,6 +166,14 @@ let g:lightline={
 let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
 
+" test
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
 let dart_html_in_string=v:true
@@ -169,6 +183,8 @@ let g:dart_format_on_save=1
 nnoremap df :DartFmt<cr>
 
 let g:lsc_auto_map = v:true
+
+
 
 """ ===== flutter ===== 
 autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
