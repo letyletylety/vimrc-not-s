@@ -75,8 +75,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+" Plug 'natebosch/vim-lsc'
+" Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
