@@ -165,23 +165,18 @@ let g:dart_format_on_save=1
 
 nnoremap df :DartFmt<cr>
 
-"lsc settingsc settingsc settingsc settings
-let g:lsc_auto_map = v:true
-" 'GoToDefinition': <C-]>,
-" 'GoToDefinitionSplit': [<C-W>], <C-W><C-]>],
-" 'FindReferences': gr,
-" 'NextReference': <C-n>,
-" 'PreviousReference': <C-p>,
-" 'FindImplementations': gI,
-" 'FindCodeActions': ga,
-" 'Rename': gR,
-" 'DocumentSymbol': go,
-" 'WorkspaceSymbol': gS,
-" 'SignatureHelp': gm,
-
 """ ===== flutter ===== 
 autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" run / pub get / devices / hot reload
+autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
+autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
+autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
+autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
+
+" toggle outline
+autocmd FileType dart nnoremap <leader>ol :CocCommand flutter.toggleOutline<CR>
 
 " ===== coc config ===== 
 " complete by enter
