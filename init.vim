@@ -75,8 +75,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
-" Plug 'natebosch/vim-lsc'
-" Plug 'natebosch/vim-lsc-dart'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
@@ -180,8 +180,8 @@ let g:lsc_auto_map = v:true
 " 'SignatureHelp': gm,
 
 """ ===== flutter ===== 
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
+autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " ===== coc config ===== 
 " complete by enter
