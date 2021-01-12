@@ -75,8 +75,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
-" Plug 'natebosch/vim-lsc'
-" Plug 'natebosch/vim-lsc-dart'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
@@ -88,7 +88,7 @@ Plug 'evanleck/vim-svelte', {'branch': 'main',
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 
 
 " Use release branch (recommend)
@@ -165,18 +165,22 @@ let g:dart_format_on_save=1
 
 nnoremap df :DartFmt<cr>
 
+let g:lsc_auto_map = v:true
+
 """ ===== flutter ===== 
 autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " run / pub get / devices / hot reload
 autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
+      " \ :CocCommand flutter.dev.openDevLog<CR>
 autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
 autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
 autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
+autocmd FileType dart nnoremap fl :CocCommand flutter.dev.openDevLog<CR>
 
 " toggle outline
-autocmd FileType dart nnoremap <leader>ol :CocCommand flutter.toggleOutline<CR>
+autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 
 " ===== coc config ===== 
 " complete by enter
@@ -286,7 +290,6 @@ autocmd FileType go nnoremap ck :cprevious<CR>
 "quit
 autocmd FileType go nnoremap cq :cclose<CR>
 
-
 " ====== svelte ======
 
 " Prettier Settings
@@ -302,7 +305,7 @@ nmap gi (coc-implementation)
 nmap gr (coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
