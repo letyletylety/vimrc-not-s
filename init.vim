@@ -166,6 +166,8 @@ let g:lightline={
 let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
 
+hi Quote ctermbg=109 guifg=#83a598
+
 " test
 " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
 nmap <silent> t<C-n> :TestNearest<CR>
@@ -173,6 +175,7 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
 
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
