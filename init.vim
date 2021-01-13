@@ -40,11 +40,15 @@ nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(
 
 
 function! SaveConfig()
-  if expand('%:p') == $HOME . '/.config/nvim/init.vim'
+  let b:path=$HOME . '/.config/nvim/init.vim'
+  " if expand('%:p') == $HOME . '/.config/nvim/init.vim'
+  echom b:path
+  if expand('%:p') == b:path
     echom expand('%:p')
     echom 'here'
     " source % <CR>
     w! /Users/lety02/Eine/vimrc-not-s/init.vim
+    !grep map b:path
     echom '::::::save done::::::'
     let b:timenow=strftime("%c")
     echom b:timenow 
@@ -178,10 +182,17 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-let test#strategy = 'asyncrun_background'
+" let test#strategy = 'asyncrun_background_term'
+let test#strategy = "neovim"
+
 " let test#neovim#term_position = "belowright"
-let test#neovim#term_position = "vert"
-let test#neovim#term_position = "vert botright 10"
+" let test#neovim#term_position = "vert"
+let test#neovim#term_position = "bo 10"
+
+" how to get out (C-o)
+if has('nvim')
+  tmap <C-o> <C-\><C-n>
+endif
 
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
