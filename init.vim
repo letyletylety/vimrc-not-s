@@ -39,9 +39,11 @@ nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR>
 nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
 
 
+"TODO : change all folder paths 
 function! SaveConfig()
   let b:path=$HOME . '/.config/nvim/'
   let b:vimrc=$HOME . '/.config/nvim/init.vim'
+  let b:mirrorpath=$HOME . '/Eine/vimrc-not-s/'
   " if expand('%:p') == $HOME . '/.config/nvim/init.vim'
   echom b:path
   echom expand(':p')
@@ -49,7 +51,7 @@ function! SaveConfig()
     echom 'here'
     " source % <CR>
     w! /Users/lety02/Eine/vimrc-not-s/init.vim
-    execute "!grep map" . b:vimrc . " > " . b:path . "key.txt"
+    execute "!grep map" . b:vimrc . " > " . b:mirrorpath . "key.txt"
     echom '::::::save done::::::'
     let b:timenow=strftime("%c")
     echom b:timenow 
