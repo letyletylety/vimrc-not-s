@@ -1,5 +1,8 @@
 # vimrc-not-s
-not simple vimrc
 
 ====
+
+## you should change paths in the init.vim
+
+## key.txt = all keymappings
 
