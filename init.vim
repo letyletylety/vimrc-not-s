@@ -80,7 +80,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " test
 Plug 'vim-test/vim-test'
 
-" dart plugine
+" dart plugins
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
@@ -176,6 +176,10 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+let test#strategy = 'asyncrun'
+let test#neovim#term_position = "belowright"
+" let test#neovim#term_position = "vert"
+" let test#neovim#term_position = "vert botright 30"
 
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
@@ -336,6 +340,6 @@ function! s:show_documentation()
     execute 'h '.expand('')
   else
     call CocAction('doHover')
-  endif
+ endif
 endfunction
 
