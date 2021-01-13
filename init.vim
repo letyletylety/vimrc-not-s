@@ -40,15 +40,16 @@ nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(
 
 
 function! SaveConfig()
-  let b:path=$HOME . '/.config/nvim/init.vim'
+  let b:path=$HOME . '/.config/nvim/'
+  let b:vimrc=$HOME . '/.config/nvim/init.vim'
   " if expand('%:p') == $HOME . '/.config/nvim/init.vim'
   echom b:path
-  if expand('%:p') == b:path
-    echom expand('%:p')
+  echom expand(':p')
+  if expand('%:p') == b:vimrc
     echom 'here'
     " source % <CR>
     w! /Users/lety02/Eine/vimrc-not-s/init.vim
-    !grep map b:path
+    execute "!grep map" . b:vimrc . " > " . b:path . key.txt
     echom '::::::save done::::::'
     let b:timenow=strftime("%c")
     echom b:timenow 
