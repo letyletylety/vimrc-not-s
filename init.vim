@@ -208,7 +208,6 @@ nnoremap df :DartFmt<cr>
 let g:lsc_auto_map = v:true
 
 
-
 """ ===== flutter ===== 
 autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
