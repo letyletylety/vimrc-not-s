@@ -1,0 +1,54 @@
+let mapleader=';'
+nnoremap :W :w
+inoremap ;; <Esc>
+nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
+nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
+    execute "!grep map " . b:vimrc . " > " . b:mirrorpath . "key.txt"
+nnoremap <silent> <leader>sc :source %<CR>:call SaveConfig()<CR>
+nnoremap tn :tabnew<CR>
+nnoremap tt :tabnext<CR>
+nnoremap tc :tabclose<CR>
+nnoremap <C-l> :nohlsearch<CR>	   
+" nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap tb :TagbarToggle<CR>
+" these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+  tmap <C-o> <C-\><C-n>
+nnoremap df :DartFmt<cr>
+let g:lsc_auto_map = v:true
+autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
+autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
+autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
+autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
+autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
+autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
+autocmd FileType dart nnoremap <leader>l :CocCommand flutter.dev.openDevLog<CR>
+autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
+autocmd FileType go nmap <leader>r :GoRun<CR>
+" autocmd FileType go nnoremap gb :GoBuild<CR>
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>t :GoTestFunc<CR>
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
+autocmd FileType go nmap <leader>d :GoDecls<CR>
+autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
+let g:go_def_mapping_enabled = 0
+autocmd FileType go nnoremap cj :cnext<CR>
+autocmd FileType go nnoremap ck :cprevious<CR>
+autocmd FileType go nnoremap cq :cclose<CR>
+nmap ff (coc-format-selected)
+nmap rn (coc-rename)
+nmap gd (coc-definition)
+nmap gy (coc-type-definition)
+nmap gi (coc-implementation)
+nmap gr (coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -51,7 +51,7 @@ function! SaveConfig()
     echom 'here'
     " source % <CR>
     w! /Users/lety02/Eine/vimrc-not-s/init.vim
-    execute "!grep map" . b:vimrc . " > " . b:mirrorpath . "key.txt"
+    execute "!grep map " . b:vimrc . " > " . b:mirrorpath . "key.txt"
     echom '::::::save done::::::'
     let b:timenow=strftime("%c")
     echom b:timenow 
