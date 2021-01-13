@@ -80,12 +80,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 " test
 Plug 'vim-test/vim-test'
 
+" async
+Plug 'skywind3000/asyncrun.vim'
+
 " dart plugins
 " https://vimawesome.com/plugin/dart-vim-plugin
 Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " replaced by coc-flutter
-Plug 'natebosch/vim-lsc'
-Plug 'natebosch/vim-lsc-dart'
+" Plug 'natebosch/vim-lsc'
+" Plug 'natebosch/vim-lsc-dart'
 
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
@@ -98,7 +101,6 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'le
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
-
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -176,10 +178,10 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-let test#strategy = 'asyncrun'
-let test#neovim#term_position = "belowright"
-" let test#neovim#term_position = "vert"
-" let test#neovim#term_position = "vert botright 30"
+let test#strategy = 'asyncrun_background'
+" let test#neovim#term_position = "belowright"
+let test#neovim#term_position = "vert"
+let test#neovim#term_position = "vert botright 10"
 
 " ======= dart-vim config =======
 " Enable HTML syntax highlighting
