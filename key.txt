@@ -26,8 +26,10 @@ autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
 autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
 autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
-autocmd FileType dart nnoremap <leader>t :CocCommand flutter.dev.hotReload<CR>
+autocmd FileType dart nnoremap <leader>fr :CocCommand flutter.dev.hotReload<CR>
+autocmd FileType dart nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<CR>
 autocmd FileType dart nnoremap <leader>l :CocCommand flutter.dev.openDevLog<CR>
+autocmd FileType dart nnoremap <leader>fq :CocCommand flutter.dev.quit<CR>
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
