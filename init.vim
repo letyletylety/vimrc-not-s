@@ -227,7 +227,7 @@ autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
 autocmd FileType dart nnoremap <leader>fr :CocCommand flutter.dev.hotReload<CR>
 autocmd FileType dart nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<CR>
 autocmd FileType dart nnoremap <leader>l :CocCommand flutter.dev.openDevLog<CR>
-autocmd FileType dart nnoremap <leader>fq :CocCommand flutter.dev.quit<CR>
+autocmd FileType dart nnoremap <leader>q :CocCommand flutter.dev.quit<CR>
 
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
