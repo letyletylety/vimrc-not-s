@@ -45,10 +45,10 @@ let g:go_def_mapping_enabled = 0
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 autocmd FileType go nnoremap cq :cclose<CR>
-nmap ff (coc-format-selected)
-nmap rn (coc-rename)
-nmap gd (coc-definition)
-nmap gy (coc-type-definition)
-nmap gi (coc-implementation)
-nmap gr (coc-references)
+nmap <leader>ff <Plug>(coc-format-selected)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>

@@ -73,8 +73,10 @@ call plug#begin('~/.vim/plugged')
  " gc[c] for toggle comment
 Plug 'tpope/vim-commentary' 
 
-" ysiw, ds
+" insert, delete, change
+" ysiw, ds, cs
 Plug 'tpope/vim-surround'
+
 
 " interface
 Plug 'majutsushi/tagbar'
@@ -106,8 +108,8 @@ Plug 'evanleck/vim-svelte', {'branch': 'main',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 " post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install',
+"   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -134,6 +136,9 @@ nnoremap <C-l> :nohlsearch<CR>
 " nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
+
+let g:NERDTreeShowLineNumbers=1
+let g:NERDTreeHighlightCursorline=1
 
 " ===== NERDCommenter settings =====
 
@@ -185,8 +190,8 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
-" let test#strategy = 'asyncrun_background_term'
-let test#strategy = "neovim"
+let test#strategy = 'asyncrun_background_term'
+" let test#strategy = "neovim"
 
 " let test#neovim#term_position = "belowright"
 " let test#neovim#term_position = "vert"
@@ -336,16 +341,16 @@ autocmd FileType go nnoremap cq :cclose<CR>
 " ====== svelte ======
 
 " Prettier Settings
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat_require_pragma = 0
-au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
+" let g:prettier#quickfix_enabled = 0
+" let g:prettier#autoformat_require_pragma = 0
+" au BufWritePre *.css,*.svelte,*.pcss,*.html,*.ts,*.js,*.json PrettierAsync
 
-nmap ff (coc-format-selected)
-nmap rn (coc-rename)
-nmap gd (coc-definition)
-nmap gy (coc-type-definition)
-nmap gi (coc-implementation)
-nmap gr (coc-references)
+nmap <leader>ff <Plug>(coc-format-selected)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
