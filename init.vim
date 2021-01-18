@@ -1,7 +1,9 @@
 syntax on
 filetype indent on
 
-set encoding=utf8
+set encoding=UTF-8
+set guifont=Hurmit_Nerd_Font:h11
+
 set nobackup
 set nowritebackup
 set cmdheight
@@ -85,7 +87,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
-Plug 'ryanoasis/vim-devicons'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
@@ -121,6 +122,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'junegunn/seoul256.vim'
 
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 """tab config
@@ -146,7 +148,7 @@ let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
 
 " ===== NERDCommenter settings =====
-
+"
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDCustomDelimiters = { 'html': { 'left': '' } }
@@ -178,6 +180,10 @@ fu! NERDCommenter_after()
   endif
 endfu
 
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:webdevicons_enable_ctrlp = 1
 
 " === colorize ===
 let g:lightline={
