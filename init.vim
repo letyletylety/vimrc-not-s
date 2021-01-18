@@ -1,6 +1,7 @@
 syntax on
 filetype indent on
 
+set encoding=utf8
 set nobackup
 set nowritebackup
 set cmdheight
@@ -77,12 +78,16 @@ Plug 'tpope/vim-commentary'
 " ysiw, ds, cs
 Plug 'tpope/vim-surround'
 
+" git
+Plug 'tpope/vim-fugitive'
 
 " interface
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
 " Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -172,6 +177,7 @@ fu! NERDCommenter_after()
     let g:ft = ''
   endif
 endfu
+
 
 " === colorize ===
 let g:lightline={
