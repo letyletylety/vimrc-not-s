@@ -17,6 +17,7 @@ set ts=2
 set expandtab
 set shiftwidth=2
 
+setlocal foldmethod=indent
 set autowrite
 
 " use system clipboard
@@ -180,10 +181,6 @@ fu! NERDCommenter_after()
   endif
 endfu
 
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_conceal_nerdtree_brackets = 1
-let g:webdevicons_enable_ctrlp = 1
 
 " === colorize ===
 let g:lightline={
@@ -377,3 +374,9 @@ function! s:show_documentation()
  endif
 endfunction
 
+
+" devicon
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
+let g:webdevicons_enable_ctrlp = 1
