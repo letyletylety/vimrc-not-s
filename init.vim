@@ -194,8 +194,8 @@ hi Quote ctermbg=109 guifg=#83a598
 " test
 " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
 nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
@@ -237,6 +237,9 @@ autocmd FileType dart nnoremap <leader>fr :CocCommand flutter.dev.hotReload<CR>
 autocmd FileType dart nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<CR>
 autocmd FileType dart nnoremap <leader>l :CocCommand flutter.dev.openDevLog<CR>
 autocmd FileType dart nnoremap <leader>q :CocCommand flutter.dev.quit<CR>
+
+" dart devtools
+autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<CR>
 
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
