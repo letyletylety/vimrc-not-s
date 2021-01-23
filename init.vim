@@ -17,8 +17,9 @@ set ts=2
 set expandtab
 set shiftwidth=2
 
-set foldmethod=expr
-set foldexpr=getline(v:lnum)[0]==\"\\t\"
+" set foldmethod=expr
+" set foldexpr=getline(v:lnum)[0]==\"\\t\"
+set foldmethod=indent
 set autowrite
 
 " use system clipboard
