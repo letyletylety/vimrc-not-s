@@ -17,7 +17,7 @@ set ts=2
 set expandtab
 set shiftwidth=2
 
-setlocal foldmethod=marker
+set foldmethod=syntax
 set autowrite
 
 " use system clipboard
