@@ -108,6 +108,8 @@ Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " Plug 'natebosch/vim-lsc'
 " Plug 'natebosch/vim-lsc-dart'
 
+Plug 'beeender/Comrade'
+
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'andrewradev/splitjoin.vim'
