@@ -226,9 +226,10 @@ nnoremap df :DartFmt<cr>
 let g:lsc_auto_map = v:true
 
 
+autocmd FileType xmap <leader>a  <Plug>(coc-codeaction-selected)
+autocmd FileType nmap <leader>a  <Plug>(coc-codeaction-selected)
+
 """ ===== flutter ===== 
-autocmd FileType dart xmap <leader>a  <Plug>(coc-codeaction-selected)
-autocmd FileType dart nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " run / pub get / devices / 
 autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
@@ -244,6 +245,9 @@ autocmd FileType dart nnoremap <leader>q :CocCommand flutter.dev.quit<CR>
 
 " dart devtools
 autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<CR>
+
+"Emulator Android
+" autocmd FileType dart nnoremap <leader>Ea 
 
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
