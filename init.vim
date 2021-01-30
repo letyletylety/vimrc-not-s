@@ -16,7 +16,7 @@ set autoindent smartindent
 set ts=2	
 set expandtab
 set shiftwidth=2
-
+set noswapfile
 " set foldmethod=expr
 " set foldexpr=getline(v:lnum)[0]==\"\\t\"
 set foldmethod=indent
@@ -43,6 +43,9 @@ inoremap ;; <Esc>
 nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
 
 nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
+
+" terminal
+nmap <leader>T :sp<bar>term<cr><c-w>J:resize10<cr>
 
 
 "TODO : change all folder paths 
