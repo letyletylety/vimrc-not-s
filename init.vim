@@ -46,7 +46,7 @@ nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(
 
 " terminal
 nmap <leader>T :sp<bar>term<cr><c-w>J:resize10<cr>
-
+tnoremap <Esc> <C-\><C-n>
 
 "TODO : change all folder paths 
 function! SaveConfig()
