@@ -23,8 +23,8 @@ nmap <silent> t<C-g> :TestVisit<CR>
   tmap <C-o> <C-\><C-n>
 nnoremap df :DartFmt<cr>
 let g:lsc_auto_map = v:true
-autocmd FileType xmap <leader>a  <Plug>(coc-codeaction-selected)
-autocmd FileType nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 autocmd FileType dart nnoremap <leader>r :CocCommand flutter.run<CR>
 autocmd FileType dart nnoremap <leader>g :CocCommand flutter.pub.get<CR>
 autocmd FileType dart nnoremap <leader>d :CocCommand flutter.devices<CR>
@@ -47,6 +47,7 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
+autocmd FileType go nmap <leader>fv :GoFreevars<CR>
 let g:go_def_mapping_enabled = 0
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>

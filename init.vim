@@ -228,9 +228,8 @@ nnoremap df :DartFmt<cr>
 
 let g:lsc_auto_map = v:true
 
-
-autocmd FileType xmap <leader>a  <Plug>(coc-codeaction-selected)
-autocmd FileType nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 """ ===== flutter ===== 
 
@@ -301,6 +300,7 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
+autocmd FileType go nmap <leader>fv :GoFreevars<CR>
 " :GoRename []
 " :GoImpl
 
