@@ -300,7 +300,7 @@ autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
-autocmd FileType go nmap <leader>fv :GoFreevars<CR>
+autocmd FileType go nmap <leader>fv :'<,'>GoFreevars<CR>
 " :GoRename []
 " :GoImpl
 
