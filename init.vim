@@ -254,6 +254,18 @@ autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<C
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 
+" == flutter bloc == 
+" make bloc folders
+" data / bloc / view
+function! s:BlocStart(name)
+  " current file 
+  let l:file = expand('%')
+  echom expand('%:h')
+  " silent !mkdir -p %:h 
+endfunction
+
+autocmd FileType dart nmap <leader>B :<C-u>call <SID>BlocStart(name)<CR>
+
 " ===== coc config ===== 
 " complete by enter
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
@@ -387,7 +399,6 @@ function! s:show_documentation()
     call CocAction('doHover')
  endif
 endfunction
-
 
 " devicon
 let g:webdevicons_enable = 1

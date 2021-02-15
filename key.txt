@@ -35,6 +35,7 @@ autocmd FileType dart nnoremap <leader>q :CocCommand flutter.dev.quit<CR>
 autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<CR>
 " autocmd FileType dart nnoremap <leader>Ea 
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
+autocmd FileType dart nmap <leader>B :<C-u>call <SID>BlocStart(name)<CR>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
