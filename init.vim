@@ -257,14 +257,14 @@ autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 " == flutter bloc == 
 " make bloc folders
 " data / bloc / view
-function! s:BlocStart(name)
+function! BlocStart(name)
   " current file 
-  let l:file = expand('%')
-  echom expand('%:h')
-  " silent !mkdir -p %:h 
+  let dir = expand('%:h')
+  echom dir
+  silent call mkdir(dir . '/data')
+  silent call mkdir(dir . '/logic')
+  silent call mkdir(dir . '/view')
 endfunction
-
-autocmd FileType dart nmap <leader>B :<C-u>call <SID>BlocStart(name)<CR>
 
 " ===== coc config ===== 
 " complete by enter
