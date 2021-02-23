@@ -261,9 +261,9 @@ function! BlocStart(name)
   let dir = expand('%:h')
   echom a:name
   echom dir
-  execute "e ". dir . '/'. a:name .'_bloc'
-  execute "e ". dir . '/'. a:name .'_event'
-  execute "e ". dir . '/'. a:name .'_state'
+  execute "!touch ". dir . '/'. a:name .'_bloc'
+  execute "!touch ". dir . '/'. a:name .'_event'
+  execute "!touch ". dir . '/'. a:name .'_state'
 endfunction
 
 " ===== coc config ===== 
