@@ -254,11 +254,9 @@ autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<C
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 
-command! -nargs=1 Nf call s:BlocStart(<q-args>)<CR>
-
 " == flutter bloc == 
 " make bloc files
-function! s:BlocStart(name)
+function! BlocStart(name)
   " current file 
   let dir = expand('%:h')
   echom a:name
