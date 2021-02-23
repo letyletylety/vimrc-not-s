@@ -254,15 +254,18 @@ autocmd FileType dart nnoremap <leader>fT :CocCommand flutter.dev.openProfiler<C
 " toggle outline
 autocmd FileType dart nnoremap ol :CocCommand flutter.toggleOutline<CR>
 
+command! -nargs=1 Nf call s:BlocStart(<q-args>)<CR>
+
 " == flutter bloc == 
 " make bloc files
-function! BlocStart(name)
+function! s:BlocStart(name)
   " current file 
   let dir = expand('%:h')
+  echom a:name
   echom dir
-  silent call touch(dir . '/'. a:name .'_bloc')
-  silent call touch(dir . '/'. a:name .'_event')
-  silent call touch(dir . '/'. a:name .'_state')
+  execute "e ". dir . '/'. a:name .'_bloc'
+  execute "e ". dir . '/'. a:name .'_event'
+  execute "e ". dir . '/'. a:name .'_state'
 endfunction
 
 " ===== coc config ===== 
