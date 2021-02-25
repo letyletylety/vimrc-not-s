@@ -163,6 +163,7 @@ let g:NERDCustomDelimiters = { 'html': { 'left': '' } }
 
 " Align comment delimiters to the left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
+let g:NERDTreeWinPos = "left"
 
 fu! NERDCommenter_before()
   if (&ft == 'html') || (&ft == 'svelte')
