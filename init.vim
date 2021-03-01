@@ -381,20 +381,6 @@ autocmd FileType go nnoremap cq :cclose<CR>
 
 " ====== julia ======
 let g:slime_target = "neovim"
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-\   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
-\       using LanguageServer;
-\       using Pkg;
-\       import StaticLint;
-\       import SymbolServer;
-\       env_path = dirname(Pkg.Types.Context().env.project_file);
-\       
-\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
-\       server.runlinter = true;
-\       run(server);
-\   ']
-\ }
 autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
 autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
 " ====== svelte ======
