@@ -124,6 +124,11 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'le
 " post install (yarn install | npm install) then load plugin only for editing supported files
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install',
 "   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
+"
+" julia
+Plug 'julialang/julia-vim'
+Plug 'jpalardy/vim-slime', { 'for': ['python', 'julia'] }
+Plug 'hanschen/vim-ipython-cell', { 'for': ['python','julia'] }
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -375,6 +380,9 @@ autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 "quit
 autocmd FileType go nnoremap cq :cclose<CR>
+
+" ====== julia ======
+let g:slime_target = "neovim"
 
 " ====== svelte ======
 
