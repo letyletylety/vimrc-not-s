@@ -52,6 +52,9 @@ let g:go_def_mapping_enabled = 0
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 autocmd FileType go nnoremap cq :cclose<CR>
+autocmd FileType julia nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+autocmd FileType julia nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+autocmd FileType julia nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 nmap <leader>ff <Plug>(coc-format-selected)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)

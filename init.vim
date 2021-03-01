@@ -111,8 +111,6 @@ Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " Plug 'natebosch/vim-lsc'
 " Plug 'natebosch/vim-lsc-dart'
 
-Plug 'beeender/Comrade'
-
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'andrewradev/splitjoin.vim'
@@ -383,7 +381,23 @@ autocmd FileType go nnoremap cq :cclose<CR>
 
 " ====== julia ======
 let g:slime_target = "neovim"
-
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+\   'julia': ['julia', '--startup-file=no', '--history-file=no', '-e', '
+\       using LanguageServer;
+\       using Pkg;
+\       import StaticLint;
+\       import SymbolServer;
+\       env_path = dirname(Pkg.Types.Context().env.project_file);
+\       
+\       server = LanguageServer.LanguageServerInstance(stdin, stdout, env_path, "");
+\       server.runlinter = true;
+\       run(server);
+\   ']
+\ }
+autocmd FileType julia nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+autocmd FileType julia nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+autocmd FileType julia nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " ====== svelte ======
 
 " Prettier Settings
