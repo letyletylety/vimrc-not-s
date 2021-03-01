@@ -395,9 +395,8 @@ let g:LanguageClient_serverCommands = {
 \       run(server);
 \   ']
 \ }
-autocmd FileType julia nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-autocmd FileType julia nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-autocmd FileType julia nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
+autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
 " ====== svelte ======
 
 " Prettier Settings
