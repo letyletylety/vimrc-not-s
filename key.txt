@@ -52,6 +52,10 @@ let g:go_def_mapping_enabled = 0
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 autocmd FileType go nnoremap cq :cclose<CR>
+" normal mode mapping
+autocmd FileType julia nnoremap <localleader>jf :JuliaFormatterFormat<CR>
+" visual mode mapping
+autocmd FileType julia vnoremap <localleader>jf :JuliaFormatterFormat<CR>
 nmap <leader>ff <Plug>(coc-format-selected)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)

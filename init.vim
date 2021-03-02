@@ -127,6 +127,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'le
 Plug 'julialang/julia-vim', { 'for' : 'julia' }
 Plug 'jpalardy/vim-slime', { 'for': ['python', 'julia'] }
 Plug 'hanschen/vim-ipython-cell', { 'for': ['python','julia'] }
+Plug 'kdheepak/JuliaFormatter.vim'
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -383,7 +384,13 @@ autocmd FileType go nnoremap cq :cclose<CR>
 let g:slime_target = "neovim"
 autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
 autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
-
+" normal mode mapping
+autocmd FileType julia nnoremap <localleader>jf :JuliaFormatterFormat<CR>
+" visual mode mapping
+autocmd FileType julia vnoremap <localleader>jf :JuliaFormatterFormat<CR>
+"format on save
+autocmd FileType julia
+    \ autocmd BufWrite <buffer> :JuliaFormatterFormat<CR>
 " ====== svelte ======
 
 " Prettier Settings
