@@ -381,8 +381,8 @@ autocmd FileType go nnoremap cq :cclose<CR>
 
 " ====== julia ======
 let g:slime_target = "neovim"
-autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
-autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
+" autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
+" autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
 " ====== svelte ======
 
 " Prettier Settings
