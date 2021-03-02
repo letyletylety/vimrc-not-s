@@ -124,7 +124,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'le
 "   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'svelte'] }
 "
 " julia
-Plug 'julialang/julia-vim'
+Plug 'julialang/julia-vim', { 'for' : 'julia' }
 Plug 'jpalardy/vim-slime', { 'for': ['python', 'julia'] }
 Plug 'hanschen/vim-ipython-cell', { 'for': ['python','julia'] }
 
@@ -383,6 +383,7 @@ autocmd FileType go nnoremap cq :cclose<CR>
 let g:slime_target = "neovim"
 autocmd FileType julia let g:latex_to_unicode_file_types = '$^'
 autocmd FileType julia let g:latex_to_unicode_file_types_blacklist = '.*'
+
 " ====== svelte ======
 
 " Prettier Settings
