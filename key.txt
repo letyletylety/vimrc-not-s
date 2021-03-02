@@ -52,6 +52,20 @@ let g:go_def_mapping_enabled = 0
 autocmd FileType go nnoremap cj :cnext<CR>
 autocmd FileType go nnoremap ck :cprevious<CR>
 autocmd FileType go nnoremap cq :cclose<CR>
+noremap <SID>Operator :<c-u>call slime#store_curpos()<cr>:set opfunc=slime#send_op<cr>g@
+noremap <unique> <script> <silent> <Plug>SlimeRegionSend :<c-u>call slime#send_op(visualmode(), 1)<cr>
+noremap <unique> <script> <silent> <Plug>SlimeLineSend :<c-u>call slime#send_lines(v:count1)<cr>
+noremap <unique> <script> <silent> <Plug>SlimeMotionSend <SID>Operator
+noremap <unique> <script> <silent> <Plug>SlimeParagraphSend <SID>Operatorip
+noremap <unique> <script> <silent> <Plug>SlimeConfig :<c-u>SlimeConfig<cr>
+noremap <unique> <script> <silent> <Plug>SlimeSendCell :<c-u>call slime#send_cell()<cr>
+if !exists("g:slime_no_mappings") || !g:slime_no_mappings
+  if !hasmapto('<Plug>SlimeRegionSend', 'x')
+    xmap <c-c><c-c> <Plug>SlimeRegionSend
+  if !hasmapto('<Plug>SlimeParagraphSend', 'n')
+    nmap <c-c><c-c> <Plug>SlimeParagraphSend
+  if !hasmapto('<Plug>SlimeConfig', 'n')
+    nmap <c-c>v <Plug>SlimeConfig
 nmap <leader>ff <Plug>(coc-format-selected)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)
