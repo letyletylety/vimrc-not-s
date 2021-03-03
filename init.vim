@@ -70,7 +70,7 @@ function! SaveConfig()
     let b:timenow=strftime("%c")
     echom b:timenow 
     !git -C /Users/lety02/Eine/vimrc-not-s/ add .
-   !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m "$(date)"
+    !git -C /Users/lety02/Eine/vimrc-not-s/ commit -m "$(date)"
     !git -C /Users/lety02/Eine/vimrc-not-s/ push
     echom '::::::git done::::::'
   else
