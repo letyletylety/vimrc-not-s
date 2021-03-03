@@ -1,6 +1,7 @@
 syntax on
 filetype indent on
 
+" ======-=--=-=--=-=-=- base settings
 set encoding=UTF-8
 set guifont=Hurmit_Nerd_Font:h11
 
@@ -14,6 +15,7 @@ set showmatch
 set foldenable
 set autoindent smartindent
 set ts=2	
+
 set expandtab
 set shiftwidth=2
 set noswapfile
@@ -24,6 +26,9 @@ set autowrite
 
 " use system clipboard
 set clipboard=unnamedplus
+
+" ======-=--=-=--=-=-=- advance settings
+autocmd Filetype julia setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 
