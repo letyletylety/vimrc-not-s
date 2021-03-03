@@ -119,6 +119,7 @@ Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'andrewradev/splitjoin.vim'
+Plug 'buoto/gotests-vim'
 
 " for svelte
 Plug 'evanleck/vim-svelte', {'branch': 'main', 
