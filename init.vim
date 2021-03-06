@@ -111,7 +111,7 @@ Plug 'skywind3000/asyncrun.vim'
 
 " dart plugins
 " https://vimawesome.com/plugin/dart-vim-plugin
-Plug 'dart-lang/dart-vim-plugin', { 'for': 'dart' }
+Plug 'dart-lang/dart-vim-plugin'
 " replaced by coc-flutter
 " Plug 'natebosch/vim-lsc'
 " Plug 'natebosch/vim-lsc-dart'
