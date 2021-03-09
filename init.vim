@@ -293,6 +293,9 @@ nnoremap <silent> <leader>es :split<CR>:CocCommand snippets.editSnippets<CR>
 
 hi! CocErrorSign guifg=#d1666a
 
+""" ===== rust ===== 
+autocmd FileType rust nmap <leader>r :RustRun<CR>
+
 """ ===== go =====
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
 
@@ -400,6 +403,7 @@ autocmd FileType julia vnoremap <localleader>jf :JuliaFormatterFormat<CR>
 "format on save
 autocmd FileType julia
     \ autocmd BufWrite <buffer> :JuliaFormatterFormat<CR>
+
 " ====== svelte ======
 
 " Prettier Settings
