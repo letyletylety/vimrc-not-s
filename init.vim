@@ -135,6 +135,9 @@ Plug 'jpalardy/vim-slime', { 'for': ['python', 'julia'] }
 Plug 'hanschen/vim-ipython-cell', { 'for': ['python','julia'] }
 Plug 'kdheepak/JuliaFormatter.vim'
 
+" rust
+Plug 'rust-lang/rust.vim'
+
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
