@@ -333,6 +333,8 @@ autocmd FileType go nmap <leader>fv :'<,'>GoFreevars<CR>
 " :GoRename []
 " :GoImpl
 
+let g:go_debug_log_output = ''
+
 let g:go_auto_type_info = 1
 " let g:go_auto_sameids = 1
 
