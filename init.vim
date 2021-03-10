@@ -319,7 +319,7 @@ endfunction
 " build or test
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 " test this function
-autocmd FileType go nmap <leader>t :GoTestFunc<CR>
+autocmd FileType go nmap <leader>t :GoTestFunc -v<CR>
 " :GoPlay
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 autocmd FileType go nmap <Leader>cb <Plug>(go-coverage-browser)
@@ -330,7 +330,10 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 autocmd FileType go nmap <leader>d :GoDecls<CR>
 autocmd FileType go nmap <leader>dd :GoDeclsDir<CR>
 autocmd FileType go nmap <leader>fv :'<,'>GoFreevars<CR>
-" :GoRename []
+" :GoRename []"
+
+" generate test
+autocmd FileType go nmap <leader>tg :GoTests<CR>
 " :GoImpl
 
 let g:go_debug_log_output = ''
