@@ -11,7 +11,8 @@ nnoremap tn :tabnew<CR>
 nnoremap tt :tabnext<CR>
 nnoremap tc :tabclose<CR>
 nnoremap <C-l> :nohlsearch<CR>	   
-nnoremap nt :ToggleNERDTreeAndTagbar<CR>
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap tb :TagbarToggle<CR>
 " these "Ctrl mappings" work well when Caps Lock is mapped to Ctrl
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
