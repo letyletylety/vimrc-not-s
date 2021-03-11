@@ -159,8 +159,8 @@ nnoremap <C-l> :nohlsearch<CR>
 								
 " nerdtree config
 " tagbar config
-nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
-" nnoremap nt :NERDTreeToggle<CR>
+" nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
+nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 " let NERDTreeWinPos = 'leftabove'
 let g:tagbar_left= 1
