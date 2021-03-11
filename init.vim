@@ -90,7 +90,6 @@ Plug 'tpope/vim-commentary'
 " insert, delete, change
 " ysiw, ds, cs
 Plug 'tpope/vim-surround'
-" gJ gS
 Plug 'andrewradev/splitjoin.vim'
 
 " git
@@ -120,7 +119,6 @@ Plug 'dart-lang/dart-vim-plugin'
 
 " go plugins
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
-Plug 'andrewradev/splitjoin.vim'
 Plug 'buoto/gotests-vim'
 
 " for svelte
