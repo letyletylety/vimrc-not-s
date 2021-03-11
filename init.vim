@@ -159,7 +159,8 @@ nnoremap <C-l> :nohlsearch<CR>
 								
 " nerdtree config
 " tagbar config
-let g:tagbar_position = 'botleft vertical'
+let g:tagbar_position = 'topleft vertical'
+let g:tagbar_width = 25
 
 let g:NERDDefaultAlign = 'left'
 let g:NERDTreeWinSize = 25
