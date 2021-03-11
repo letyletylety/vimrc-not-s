@@ -159,13 +159,15 @@ nnoremap <C-l> :nohlsearch<CR>
 								
 " nerdtree config
 " tagbar config
-nnoremap nt :NERDTreeToggle<CR>
-nnoremap tb :TagbarToggle<CR>
-let NERDTreeWinPos = 'leftabove'
 let g:tagbar_position = 'leftbelow'
 
+let g:NERDDefaultAlign = 'left'
+let g:NERDTreeWinSize = 10
+let g:NERDTreeWinPos = "left"
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap tb :TagbarToggle<CR>
 " ===== NERDCommenter settings =====
 "
 let g:NERDSpaceDelims = 1
