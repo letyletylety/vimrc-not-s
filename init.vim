@@ -167,7 +167,8 @@ let g:NERDTreeWinSize = 25
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeShowLineNumbers=0
 let g:NERDTreeHighlightCursorline=1
-nnoremap nt :NERDTreeToggle<CR>
+" nnoremap nt :NERDTreeToggle<CR>
+nnoremap nt :NERDTreeToggle<CR> :TagbarToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 " ===== NERDCommenter settings =====
 "
