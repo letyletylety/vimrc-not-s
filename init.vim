@@ -163,7 +163,8 @@ let g:tagbar_left = 1
 let g:tagbar_vertical = 25
 let g:NERDTreeWinPos = 'left'
 let g:NERDTreeMinimalUI = 1
-nnoremap nt :NERDTreeToggle <CR> :TagbarToggle <CR>
+" nnoremap nt :NERDTreeToggle <CR> :TagbarToggle <CR>
+nnoremap nt :TagbarToggle <CR> :NERDTreeToggle <CR>
 " nnoremap nt :NERDTreeToggle<CR>
 " nnoremap tb :TagbarToggle<CR>
 
