@@ -162,7 +162,7 @@ nnoremap <C-l> :nohlsearch<CR>
 " nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
-let NERDTreeWinPos = 'leftabove'
+" let NERDTreeWinPos = 'leftabove'
 let g:tagbar_position = 'leftbelow'
 
 let g:NERDTreeShowLineNumbers=1
