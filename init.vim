@@ -90,6 +90,8 @@ Plug 'tpope/vim-commentary'
 " insert, delete, change
 " ysiw, ds, cs
 Plug 'tpope/vim-surround'
+" gJ gS
+Plug 'andrewradev/splitjoin.vim'
 
 " git
 Plug 'tpope/vim-fugitive'
