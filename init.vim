@@ -163,7 +163,7 @@ nnoremap <C-l> :nohlsearch<CR>
 nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 " let NERDTreeWinPos = 'leftabove'
-let g:tagbar_position = 'leftbelow'
+let g:tagbar_position = 'left'
 
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
