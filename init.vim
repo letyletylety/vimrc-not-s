@@ -162,7 +162,7 @@ nnoremap <C-l> :nohlsearch<CR>
 let g:tagbar_position = 'leftbelow'
 
 let g:NERDDefaultAlign = 'left'
-let g:NERDTreeWinSize = 15
+let g:NERDTreeWinSize = 20
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
