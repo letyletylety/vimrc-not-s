@@ -160,9 +160,10 @@ nnoremap <C-l> :nohlsearch<CR>
 " nerdtree config
 " tagbar config
 let g:NERDTreeWinPos = 'left'
+let g:NERDTreeWinSize =  max([g:tagbar_width, g:NERDTreeWinSize])
 let g:NERDTreeMinimalUI = 1
 let g:tagbar_left = 1
-let g:tagbar_vertical = 25
+let g:tagbar_vertical = winheight(0)/2
 nnoremap nt :NERDTreeToggle <CR> :TagbarToggle <CR>
 " nnoremap nt :TagbarToggle <CR> :NERDTreeToggle <CR>
 " nnoremap nt :NERDTreeToggle<CR>
