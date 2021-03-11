@@ -163,7 +163,7 @@ nnoremap nt :NERDTreeToggle<CR>:TagbarToggle<CR>
 " nnoremap nt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 " let NERDTreeWinPos = 'leftabove'
-let g:tagbar_position = 'left'
+let g:tagbar_left= 1
 
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
@@ -175,8 +175,8 @@ let g:NERDCompactSexyComs = 1
 let g:NERDCustomDelimiters = { 'html': { 'left': '' } }
 
 " Align comment delimiters to the left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
 let g:NERDTreeWinPos = "left"
+let g:NERDTreeMinimalUI = 1
 
 fu! NERDCommenter_before()
   if (&ft == 'html') || (&ft == 'svelte')
