@@ -174,7 +174,7 @@ function! s:ToggleNERDTreeAndTagbar()
 
     " settings required for split window nerdtree / tagbar
     let g:NERDTreeWinSize = max([g:tagbar_width, g:NERDTreeWinSize])
-    let g:tagbar_left = 0
+    let g:tagbar_left = 1
     let g:tagbar_vertical = winheight(0)/2
 
     " Detect which plugins are open
@@ -216,10 +216,11 @@ function! s:ToggleNERDTreeAndTagbar()
     let g:tagbar_vertical = s:tagbar_vertical_user
 endfunction
 
-command! -nargs=0 ToggleNERDTreeAndTagbar :call s:ToggleNERDTreeAndTagbar()
-
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeHighlightCursorline=1
+
+command! -nargs=0 ToggleNERDTreeAndTagbar :call s:ToggleNERDTreeAndTagbar()
+
 
 nnoremap nt :ToggleNERDTreeAndTagbar<CR>
 
