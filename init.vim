@@ -174,7 +174,7 @@ function! s:ToggleNERDTreeAndTagbar()
 
     " settings required for split window nerdtree / tagbar
     let g:NERDTreeWinSize = max([g:tagbar_width, g:NERDTreeWinSize])
-    let g:tagbar_left = 1
+    let g:tagbar_left = 0
     let g:tagbar_vertical = winheight(0)/2
 
     " Detect which plugins are open
@@ -202,7 +202,6 @@ function! s:ToggleNERDTreeAndTagbar()
 
         " open tagbar as split of nerdtree window
         NERDTree | TagbarOpen
-        " TagbarOpen | NERDTree
 
         " go back to initial buffer
         while !exists('b:NERDTreeAndTagbar_come_back_to_me')
