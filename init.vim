@@ -122,6 +122,8 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go'}
 Plug 'buoto/gotests-vim'
 
 " for svelte
+Plug 'mattn/emmet-vim'
+
 Plug 'evanleck/vim-svelte', {'branch': 'main', 
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
