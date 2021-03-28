@@ -63,6 +63,7 @@ function! MonkeyTerminalOpen()
     new monkey_terminal
     " Moves to the window the right the current one
     wincmd J
+    resize 10
     let s:monkey_terminal_job_id = termopen($SHELL, { 'detach': 1 })
 
      " Change the name of the buffer to "Terminal 1"
@@ -79,6 +80,7 @@ function! MonkeyTerminalOpen()
     sp
     " Moves to the window below the current one
     wincmd J
+    resize 10
     buffer Terminal\ 1
      " Gets the id of the terminal window
      let s:monkey_terminal_window = win_getid()
