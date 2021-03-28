@@ -138,7 +138,10 @@ Plug 'hanschen/vim-ipython-cell', { 'for': ['python','julia'] }
 Plug 'kdheepak/JuliaFormatter.vim'
 
 " rust
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
+
+"swift
+Plug 'keith/swift.vim', {'for': 'swift'}
 
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -414,6 +417,8 @@ autocmd FileType julia
     \ autocmd BufWrite <buffer> :JuliaFormatterFormat<CR>
 
 " ====== svelte ======
+
+" ====== swift command --------------------------- {{{
 
 " Prettier Settings
 " let g:prettier#quickfix_enabled = 0
