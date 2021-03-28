@@ -3,8 +3,8 @@ nnoremap :W :w
 inoremap ;; <Esc>
 nnoremap <silent> <leader>ec :tabnew ~/.config/nvim/init.vim<CR> 
 nnoremap <leader>vs :silent exec "!open 1://file/" . expand("%:p") . ":" . line(".") . ":" . col(".")<cr>:redraw!<cr>
-nmap <leader>T :tabnew<bar>term<cr>
-tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>T :call MonkeyTerminalToggle()<cr>
+tnoremap <Esc> <C-\><C-n>:call MonkeyTerminalToggle()<cr>
     execute "!grep map " . b:vimrc . " > " . b:mirrorpath . "key.txt"
 nnoremap <silent> <leader>sc :source %<CR>:call SaveConfig()<CR>
 nnoremap tn :tabnew<CR>
