@@ -489,6 +489,10 @@ autocmd FileType julia
 
 " ====== swift command --------------------------- {{{
 nnoremap <leader>sb :!swift %<CR>
+
+" swiftformat ---------------------------- {{{
+nnoremap <leader>F :!swiftformat %<cr>
+" }}}
 " ctags for swift -------------------------- {{{
 let g:tagbar_type_swift = {
   \ 'ctagstype': 'swift',

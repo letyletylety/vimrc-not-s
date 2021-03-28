@@ -59,6 +59,7 @@ autocmd FileType julia nnoremap <localleader>jf :JuliaFormatterFormat<CR>
 " visual mode mapping
 autocmd FileType julia vnoremap <localleader>jf :JuliaFormatterFormat<CR>
 nnoremap <leader>sb :!swift %<CR>
+nnoremap <leader>F :!swiftformat %<cr>
 nmap <leader>ff <Plug>(coc-format-selected)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)
