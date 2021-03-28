@@ -120,7 +120,7 @@ endfunction
 
 " terminal
 nnoremap <leader>T :call MonkeyTerminalToggle()<cr>
-tnoremap <Esc> <C-\><C-n>:call MonkeyTerminalToggle()<cr>
+tnoremap <leader>T <C-\><C-n>:call MonkeyTerminalToggle()<cr>
 
 "TODO : change all folder paths 
 function! SaveConfig()
