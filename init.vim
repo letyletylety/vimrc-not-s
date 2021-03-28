@@ -305,7 +305,7 @@ let test#neovim#term_position = "bo 10"
 
 " how to get out (C-o)
 if has('nvim')
-  tmap <C-o> <C-\><C-n>
+  tmap <esc> <C-\><C-n>
 endif
 
 " ======= dart-vim config =======

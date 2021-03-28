@@ -20,7 +20,7 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-  tmap <C-o> <C-\><C-n>
+  tmap <esc> <C-\><C-n>
 nnoremap df :DartFmt<cr>
 let g:lsc_auto_map = v:true
 xmap <leader>a  <Plug>(coc-codeaction-selected)
