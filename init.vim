@@ -283,7 +283,7 @@ endfu
 let g:lightline={
   \'colorscheme': 'seoul256'
   \}
-let g:seoul256_background=233 " ~ 255(lightest)
+let g:seoul256_background=240 " ~ 255(lightest)
 colo seoul256
 
 hi Quote ctermbg=109 guifg=#83a598
@@ -314,7 +314,7 @@ let dart_html_in_string=v:true
 let g:dart_style_guide=2
 let g:dart_format_on_save=1
 
-nnoremap df :DartFmt<cr>
+autocmd FileType dart nnoremap df :DartFmt<cr>
 
 let g:lsc_auto_map = v:true
 
@@ -488,10 +488,10 @@ autocmd FileType julia
 " ====== svelte ======
 
 " ====== swift command --------------------------- {{{
-nnoremap <leader>sb :!swift %<CR>
+autocmd FileType swift nnoremap <leader>sb :!swift %<CR>
 
 " swiftformat ---------------------------- {{{
-nnoremap <leader>F :!swiftformat %<cr>
+autocmd FileType swift nnoremap <leader>F :!swiftformat %<cr>
 " }}}
 " ctags for swift -------------------------- {{{
 let g:tagbar_type_swift = {
