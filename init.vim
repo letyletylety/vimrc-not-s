@@ -283,7 +283,7 @@ endfu
 let g:lightline={
   \'colorscheme': 'seoul256'
   \}
-let g:seoul256_background=240 " ~ 255(lightest)
+let g:seoul256_background=233 " ~ 255(lightest)
 colo seoul256
 
 hi Quote ctermbg=109 guifg=#83a598
